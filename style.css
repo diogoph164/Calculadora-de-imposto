@@ -23,7 +23,8 @@ main {
 .titulo-calculo {
     text-align: center;
     position: relative;
-    top: -5%;
+    top: -9%;
+    padding-bottom: 15px;
 }
 
 input,
@@ -36,29 +37,53 @@ button {
     outline: none;
 }
 
-#sobre {
+.sobre-inss::backdrop {
+    background-color: rgb(0 0 0 / .8);
+    backdrop-filter: blur(8px);
+}
+
+.sobre-inss {
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 60%;
+    height: 32%;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.fechar {
+    position: relative;
+    left: -1%;
     background-color: rgba(248, 241, 241, 0.96);
     color: rgb(22, 20, 20);
-    border-left: 4px solid #3273dc;
-    border-top: none;
-    border-right: none;
-    border-bottom: none;
+    border: none;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     border-radius: 6px;
     cursor: pointer;
-    height: 70px;
-    width: 60%;
-    margin-left: 70px;
-    font-size: 18px;
+    height: 40px;
+    width: 15%;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
 }
 
-#sobre:hover {
+.fechar:hover {
+    color: #3d3f41ab;
     transform: scale(1.03);
 }
 
-#exemplo {
+label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    bottom: 10%;
+}
+
+.botao-inss {
+    position: relative;
+    bottom: 6%;
     background-color: rgba(248, 241, 241, 0.96);
     color: rgb(22, 20, 20);
     border-left: 4px solid #3273dc;
@@ -72,42 +97,25 @@ button {
     width: 60%;
     margin-left: 70px;
     font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 600;
 }
 
-#exemplo:hover {
-    transform: scale(1.03);
-}
-
-#resumo {
-    background-color: rgba(248, 241, 241, 0.96);
-    color: rgb(22, 20, 20);
-    border-left: 4px solid #3273dc;
-    border-top: none;
-    border-right: none;
-    border-bottom: none;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 60%;
-    height: 70px;
-    margin-left: 70px;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-}
-
-#resumo:hover {
+.botao-inss:hover {
     transform: scale(1.03);
 }
 
 #calcular {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
     background-color: #3273dc;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    position: relative;
+    bottom: 10%;
 }
 
 #calcular:hover {
@@ -118,51 +126,133 @@ button {
     display: flex;
     justify-content: center;
     align-items: end;
-    margin-top: 95px;
+    position: relative;
+    top: 68px;
     color: rgba(0, 0, 0, 0.299);
     font-size: 14px;
 }
 
 #salario {
+    position: relative;
+    bottom: 10%;
     border: none;
     background-color: rgba(240, 248, 255, 0.764);
     border-radius: 6px;
+    font-weight: 600;
 }
 
-#sobre-inss {
+.informacao_inss {
     width: 400px;
     height: 400px;
     background-color: white;
     border-radius: 10px;
     position: absolute;
     right: 70%;
-    top: 5%;
+    top: 6%;
     border: 1px solid #3273dc;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    justify-content: center;
+    gap: 8px;
 }
 
 .titulo-inss {
     text-align: center;
+    position: relative;
+    bottom: 6%;
 }
 
-#imposto-de-renda {
+.img-imposto {
+    position: absolute;
+    left: 3px;
+    top: 86%;
+    cursor: pointer;
+}
+
+
+.img-inss {
+    position: absolute;
+    left: 3px;
+    top: 86%;
+    cursor: pointer;
+}
+
+img {
+    width: 19%;
+    height: 19%;
+    border-radius: 20px;
+    border: 1px , solid #3273dc;
+}
+
+.imposto-de-renda {
     width: 400px;
     height: 400px;
     background-color: white;
     border-radius: 10px;
     position: absolute;
     left: 70%;
-    top: 5%;
+    top: 6%;
     border: 1px solid #3273dc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.botao-renda {
+    position: relative;
+    bottom: 6%;
+    background-color: rgba(248, 241, 241, 0.96);
+    color: rgb(22, 20, 20);
+    border-right: 4px solid #3273dc;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 70px;
+    width: 60%;
+    margin-left: 70px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+
+.botao-renda:hover {
+    transform: scale(1.03);
+}
+
+.renda {
+    padding-top: 0.2%;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 60%;
+    height: 44%;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.renda::backdrop {
+    background-color: rgb(0 0 0 / .8);
+    backdrop-filter: blur(8px);
 }
 
 .titulo-imposto {
     text-align: center;
+    position: relative;
+    bottom: 6%;
 }
 
 #resultado {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    position: absolute;
+    right: 42.5%;
+    bottom: 38.9%;
     margin-top: 15px;
     line-height: 1.8;
 }

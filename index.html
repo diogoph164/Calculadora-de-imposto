@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <title>Calculadora de Impostos</title>
     <link rel="stylesheet" href="style.css">
+    <!-- script defer que vai funcionar depois que rodar todo html -->
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <main>
+        <!-- Calculo que chega ao salario ja com desconto do imposto -->
         <h1 class="titulo-calculo">Calculadora de Impostos</h1>
 
         <label for="salario">Salário bruto (R$):</label>
@@ -20,45 +22,146 @@
         <p class="descricao">Feito pelo programador Diogo</p>
 
         <!-- Uma observação sobre o que seria o inss -->
-        <div id="sobre-inss">
+        <div class="informacao_inss">
 
             <h2 class="titulo-inss">Sobre Inss</h2>
 
-            <button id="sobre">Como funciona?</button>
+            <div class="img-inss">
+                <a href="https://pt.wikipedia.org/wiki/Instituto_Nacional_do_Seguro_Social" target="_blank">
+                <img src="img/inss.png" alt="Inss">
+                </a>
+            </div>
 
-            <dialog>
+            <button class="botao-inss">Como funciona?</button>
+            <!-- Explicação de como funciona o inss -->
+            <dialog class="sobre-inss">
 
-            <p>O INSS (Instituto Nacional do Seguro Social) é responsável por administrar benefícios como
-                aposentadoria,
-                auxílio-doença e salário-maternidade. Para trabalhadores com carteira assinada, uma porcentagem do
-                salário é descontada mensalmente para contribuir com a Previdência Social. O desconto é progressivo, ou
-                seja, depende do valor recebido.
-            </p>
+                <p>O INSS (Instituto Nacional do Seguro Social) é responsável por administrar benefícios como
+                    aposentadoria,
+                    auxílio-doença e salário-maternidade. Para trabalhadores com carteira assinada, uma porcentagem do
+                    salário é descontada mensalmente para contribuir com a Previdência Social. O desconto é progressivo,
+                    ou
+                    seja, depende do valor recebido.
+                </p>
+
+                <button class="fechar">Fechar</button>
+
             </dialog>
 
-            <button id="exemplo">Exemplo</button>
-            
-            <dialog>
-            <p>Exemplos:
+            <button class="botao-inss">Exemplo</button>
 
-                - Quem ganha R$ 1.621,00 tem um desconto de aproximadamente R$ 121,58 (7,5%).
-                - Quem ganha R$ 2.000,00 tem um desconto de aproximadamente R$ 155,69.
-                - Quem ganha R$ 3.000,00 tem um desconto de aproximadamente R$ 248,60.
-            </p>
+            <dialog class="sobre-inss">
+
+                <p>Exemplos:
+
+                    - Quem ganha R$ 1.621,00 tem um desconto de aproximadamente R$ 121,58 (7,5%).
+                    - Quem ganha R$ 2.000,00 tem um desconto de aproximadamente R$ 155,69.
+                    - Quem ganha R$ 3.000,00 tem um desconto de aproximadamente R$ 248,60.
+
+                </p>
+
+                <button class="fechar">Fechar</button>
+
             </dialog>
-            <button id="resumo">Resumo</button>
-            <dialog>
-            <p class="resumo">Resumindo: o INSS retira uma parte do salário todos os meses para financiar a proteção do trabalhador em
-                situações como aposentadoria, doença ou afastamento do trabalho.
 
-                Os valores são exemplos de cálculo pelas faixas progressivas de 2026 e não incluem outros descontos,
-                como vale-transporte ou Imposto de Renda.</p>
+            <button class="botao-inss">Resumo</button>
+
+            <dialog class="sobre-inss">
+
+                <p class="resumo">Resumindo: o INSS retira uma parte do salário todos os meses para financiar a proteção
+                    do trabalhador em
+                    situações como aposentadoria, doença ou afastamento do trabalho.
+
+                    Os valores são exemplos de cálculo pelas faixas progressivas de 2026 e não incluem outros descontos,
+                    como vale-transporte ou Imposto de Renda.
+                </p>
+
+                <button class="fechar">Fechar</button>
+
             </dialog>
         </div>
         <!-- Uma observação sobre o imposto de renda -->
-        <div id="imposto-de-renda">
+        <div class="imposto-de-renda">
+
             <h2 class="titulo-imposto">Sobre imposto de renda</h2>
-            <p></p>
+
+            <button class="botao-renda">Como funciona?</button>
+
+            <div class="img-imposto">
+                <a href="https://pt.wikipedia.org/wiki/Imposto_de_renda" target="_blank">
+                <img src="img/imposto de renda.png" alt="Impostos-de-renda">
+                </a>
+            </div>
+            <!-- Explicação de como funciona o imposto de renda -->
+
+            <dialog class="renda">
+
+                <p>
+                    O Imposto de Renda (IR) funciona como uma fatia que o governo retira dos seus ganhos para financiar
+                    o país. Ele é progressivo: quem ganha mais, paga uma porcentagem maior.
+                    Aqui está o resumo prático de como ele funciona no dia a dia:
+                    • Desconto Mensal: Se você trabalha fichado (CLT), o imposto já vem descontado direto do seu salário
+                    todo mês.
+                    • Declaração Anual: Uma vez por ano, você faz as contas com a Receita Federal. Você soma tudo o que
+                    ganhou e abate o que gastou com coisas permitidas (como saúde e educação).
+                    • Restituição ou Pagamento: Se o governo descontou mais do que deveria ao longo do ano, você recebe
+                    um Pix de volta (restituição). Se descontou menos, você precisa pagar a diferença.
+                </p>
+
+                <button class="fechar">Fechar</button>
+
+            </dialog>
+
+            <button class="botao-renda">Exemplo</button>
+
+            <!-- Exemplo de como funciona o imposto de renda -->
+
+            <dialog class="renda">
+
+                <p>
+                    💡 Exemplo Prático (Pessoa Física)
+
+                    Imagine duas pessoas que trabalham na mesma empresa, usando como base as regras gerais de faixas de
+                    imposto:
+                    • Ana (Isenta): Ganha R$ 2.500 por mês. Ela está na faixa de isenção. O governo não toca no salário
+                    dela. Ela recebe os R$ 2.500 integrais (fora outros descontos como INSS).
+                    • Bruno (Taxado): Ganha R$ 6.000 por mês. Como ele ganha mais, ele entra na fatia mais alta do
+                    imposto (por exemplo, 27,5% sobre a parte do salário que passa do limite). Todo mês, a empresa já
+                    retém cerca de R$ 600 do salário dele para mandar ao governo.
+                    Na Declaração Anual:
+                    • Se o Bruno gastou muito com faculdade e exames médicos naquele ano, ele joga esses comprovantes no
+                    sistema.
+                    • O governo recalcula e vê que, por causa desses gastos, o Bruno deveria ter pago apenas R$ 400 por
+                    mês em vez de R$ 600.
+                    • O Impacto: O governo restitui (devolve) a diferença acumulada para o Bruno.
+                </p>
+
+                <button class="fechar">Fechar</button>
+
+            </dialog>
+
+
+            <button class="botao-renda">Resumo</button>
+
+            <!-- Resumo sobre o imposto de renda -->
+
+            <dialog class="renda">
+
+                <p>
+                    O Impacto em 3 Pontos
+
+                    1. No seu bolso: Diminui o seu dinheiro imediato para compras, mas os gastos com saúde e educação
+                    ajudam a "aliviar" o prejuízo no ano seguinte.
+                    2. No consumo: Se o governo sobe o imposto dos mais ricos, sobra menos dinheiro para eles comprarem
+                    bens de luxo. Se o governo isenta os mais pobres, sobra mais dinheiro para eles gastarem no
+                    supermercado, movimentando o comércio local.
+                    3. No país: Esse dinheiro arrecadado com o Bruno e outras pessoas é usado para pagar hospitais
+                    públicos, asfaltar estradas e manter escolas funcionando.
+                </p>
+
+                <button class="fechar">Fechar</button>
+
+            </dialog>
         </div>
 
     </main>

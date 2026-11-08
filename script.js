@@ -1,9 +1,37 @@
-// 1. Pegando os elementos do HTML pelo id
+// Pegando os elementos do HTML pelo id
 const campoSalario = document.getElementById("salario");
 const botao = document.getElementById("calcular");
 const resultado = document.getElementById("resultado");
+const botao_inss = document.querySelectorAll(".botao-inss");
+const sobre_inss = document.querySelectorAll(".sobre-inss");
+const botao_fechar = document.querySelectorAll(".fechar")
+const botao_renda = document.querySelectorAll(".botao-renda")
+const sobre_renda = document.querySelectorAll(".renda")
 
-// 2. Quando clicar no botão, executa a função
+// Função de abrir informações ao clicar no inss
+botao_inss.forEach((botoes_inss, indice) => {
+    botoes_inss.onclick = function () {
+        sobre_inss[indice].showModal();
+    }
+});
+
+// O botão para fechar as janela da informações
+
+botao_fechar.forEach((fechar) => {
+    fechar.onclick = function () {
+        fechar.closest("dialog").close();
+    }
+});
+
+// Função de abrir informações ao clicar no imposto de renda
+
+botao_renda.forEach((botoes_renda, indice) => {
+    botoes_renda.onclick = function () {
+        sobre_renda[indice].showModal();
+    }
+});
+
+// Quando clicar no botão, executa a função
 botao.addEventListener("click", function () {
 
     // O campo devolve texto, então converto para número
@@ -15,7 +43,7 @@ botao.addEventListener("click", function () {
         return;
     }
 
-    // 3. INSS (tabela 2026) - PROGRESSIVO:
+    // INSS (tabela 2026) - PROGRESSIVO:
     // cada alíquota só vale para a parte do salário dentro da faixa.
     let inss;
     if (salario <= 1621) {
@@ -30,7 +58,7 @@ botao.addEventListener("click", function () {
         inss = 988.09; // teto: acima de 8.475,55 não aumenta mais
     }
 
-    // 4. Imposto de Renda (2026)
+    // Imposto de Renda (2026)
     // A base de cálculo é o salário menos o INSS.
     const base = salario - inss;
     let ir;
@@ -62,10 +90,10 @@ botao.addEventListener("click", function () {
         }
     }
 
-    // 5. Salário líquido
+    //  Salário líquido
     const liquido = salario - inss - ir;
 
-    // 6. Mostra o resultado na tela
+    // Mostra o resultado na tela
     resultado.innerHTML =
         "INSS: R$ " + inss.toFixed(2) + "<br>" +
         "Imposto de Renda: R$ " + ir.toFixed(2) + "<br>" +
