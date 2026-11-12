@@ -12,18 +12,20 @@ body {
 }
 
 main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: white;
-    padding: 25px;
+    padding: 30px;
     border-radius: 10px;
     border: 1px solid #3273dc;
     width: 400px;
-    height: 400px;
+    height: 410px;
 }
 
 .titulo-calculo {
     text-align: center;
-    position: relative;
-    top: -9%;
     padding-bottom: 15px;
 }
 
@@ -78,7 +80,7 @@ label {
     font-size: 20px;
     font-weight: 600;
     position: relative;
-    bottom: 10%;
+    bottom: 1%;
 }
 
 .botao-inss {
@@ -114,8 +116,6 @@ label {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    position: relative;
-    bottom: 10%;
 }
 
 #calcular:hover {
@@ -126,15 +126,11 @@ label {
     display: flex;
     justify-content: center;
     align-items: end;
-    position: relative;
-    top: 68px;
     color: rgba(0, 0, 0, 0.299);
     font-size: 14px;
 }
 
 #salario {
-    position: relative;
-    bottom: 10%;
     border: none;
     background-color: rgba(240, 248, 255, 0.764);
     border-radius: 6px;
@@ -250,9 +246,6 @@ img {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 600;
     font-size: 18px;
-    position: absolute;
-    right: 42.5%;
-    bottom: 38.9%;
-    margin-top: 15px;
-    line-height: 1.8;
+    line-height: 1.7;
+    padding-bottom: 30px;
 }
